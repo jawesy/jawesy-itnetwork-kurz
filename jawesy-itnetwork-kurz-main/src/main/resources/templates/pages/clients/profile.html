@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/springsecurity5">
+<head th:replace="~{fragments/layout.html :: head}">
+</head>
+<body>
+<header th:replace="~{fragments/layout.html :: header}"></header>
+<!-- Stavové zprávy -->
+<div class="flash-message message-success" th:text="${success}" th:if="${success}"></div>
+<div class="flash-message message-error" th:text="${error}" th:if="${error}"></div>
+<article>
+    <section>
+        <div class="container profile-container">
+            <!-- Sidebar s profilem -->
+            <div class="sidebar" style="background-image: url('/images/editclient.jpg'); background-size: cover; background-position: center;">
+                <img class="img-fluid rounded mb-4 mb-lg-0" th:src="@{/images/profile.jpg}" alt="neživotní pojištění" />
+            </div>
+
+            <div class="main-content">
+                <h1>Osobní profil</h1>
+                <br>
+                <div class="personal-details row">
+                    <!-- Levý sloupec -->
+                    <div class="col-md-6">
+                        <div class="mb-4">
+                            <label for="clientId">Číslo klienta:</label>
+                            <p id="clientId"><a th:text="${client.clientId}"></a></p>
+                        </div>
+                        <div class="mb-4">
+                            <label for="firstName">Křestní jméno:</label>
+                            <p id="firstName"><a th:text="${client.forename}"></a></p>
+                        </div>
+                        <div class="mb-4">
+                            <label for="lastName">Příjmení:</label>
+                            <p id="lastName"><a th:text="${client.lastName}"></a></p>
+                        </div>
+                        <div class="mb-4">
+                            <label for="nationalID">Rodné číslo:</label>
+                            <p id="nationalID"><a th:text="${client.nationalID}"></a></p>
+                        </div>
+                    </div>
+                    <!-- Pravý sloupec -->
+                    <div class="col-md-6">
+                        <div class="mb-4">
+                            <label for="address">Adresa:</label>
+                            <p id="address">
+                                <a th:text="${client.street} + ' '"></a><a th:text="${client.houseNumber}"></a><br>
+                                <a th:text="${client.city+ ' '}"></a><a th:text="${client.zip}"></a>
+                            </p>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email">Email:</label>
+                            <p id="email"><a th:text="${client.email}"></a></p>
+                        </div>
+                        <div class="mb-4">
+                            <label for="phone">Telefon:</label>
+                            <p id="phone"><a th:text="${client.phone}"></a></p>
+                        </div>
+                        <p>
+                            <!-- Tlačítka Upravit a Seznam klientů -->
+                            <a class="btn btn-secondary btn-sm" th:href="@{'/clients/edit/' + ${client.clientId}}">Upravit</a>
+                            <a class="btn btn-primary btn-sm" th:href="@{/clients}" sec:authorize="hasRole('ADMIN')">Seznam klientů</a>
+                        </p>
+                    </div>
+                </div>
+
+                <br>
+
+                <!-- Flexboxy -->
+                <div class="flex-container">
+                    <!-- Kolonka pro povinné ručení -->
+                    <div class="flex-item" style="border-radius: 15px; background-color: #d0e0e1;">
+                        <div style="align-items: center" class="font-weight-dark text-center">
+                            <br>
+                            <i class="fas fa-car fa-6x mb-3"></i>
+                            <h5>Povinné ručení</h5>
+                            <br>
+                            <p th:style="'font-weight: bold; background-color: ' + (${hasMandatoryInsurance} ? '#d4edda' : '#f8d7da') + '; color: ' + (${hasMandatoryInsurance} ? 'green' : 'red')"
+                               th:text="${hasMandatoryInsurance ? 'Sjednáno' : 'Nesjednáno'}">
+                            </p>
+                            <a class="btn btn-primary btn-sm"
+                               th:href="${hasMandatoryInsurance ? '/details/mandatoryDetails/' + client.clientId : '/insurances/mandatoryForm?clientId=' + client.clientId}"
+                               th:text="${hasMandatoryInsurance ? 'Zobrazit detail' : 'Sjednat'}"></a>
+                        </div>
+                    </div>
+
+                    <!-- Kolonka pro havarijní pojištění -->
+                    <div class="flex-item" style="border-radius: 15px; background-color: #d0e0e1;">
+                        <div style="align-items: center" class="font-weight-dark text-center">
+                            <br>
+                            <i class="fas fa-car-crash fa-6x mb-3"></i>
+                            <h5>Havarijní pojištění</h5>
+                            <br>
+                            <p th:style="'font-weight: bold; background-color: ' + (${hasCrashInsurance} ? '#d4edda' : '#f8d7da') + '; color: ' + (${hasCrashInsurance} ? 'green' : 'red')"
+                               th:text="${hasCrashInsurance ? 'Sjednáno' : 'Nesjednáno'}">
+                            </p>
+                            <a class="btn btn-primary btn-sm"
+                               th:href="${hasCrashInsurance ? '/details/crashDetails/' + client.clientId : '/insurances/crashForm?clientId=' + client.clientId}"
+                               th:text="${hasCrashInsurance ? 'Zobrazit detail' : 'Sjednat'}"></a>
+                        </div>
+                    </div>
+
+                    <!-- Kolonka pro pojištění nemovitosti -->
+                    <div class="flex-item" style="border-radius: 15px; background-color: #d0e0e1;">
+                        <div style="align-items: center" class="font-weight-dark text-center">
+                            <br>
+                            <i class="fas fa-building fa-6x mb-3"></i>
+                            <h5>Pojištění nemovitosti</h5>
+                            <br>
+                            <p th:style="'font-weight: bold; background-color: ' + (${hasPropertyInsurance} ? '#d4edda' : '#f8d7da') + '; color: ' + (${hasPropertyInsurance} ? 'green' : 'red')"
+                               th:text="${hasPropertyInsurance ? 'Sjednáno' : 'Nesjednáno'}">
+                            </p>
+                            <a class="btn btn-primary btn-sm"
+                               th:href="${hasPropertyInsurance ? '/details/propertyDetails/' + client.clientId : '/insurances/propertyForm?clientId=' + client.clientId}"
+                               th:text="${hasPropertyInsurance ? 'Zobrazit detail' : 'Sjednat'}"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>
+<footer th:replace="~{fragments/layout.html :: footer}"></footer>
+</body>
+</html>
+

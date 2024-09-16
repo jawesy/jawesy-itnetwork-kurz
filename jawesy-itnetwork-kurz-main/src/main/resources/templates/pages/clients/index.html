@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="cs-cz" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout.html :: head}"></head>
+
+<body>
+<header th:replace="~{fragments/layout.html :: header}"></header>
+<!-- Stavové zprávy -->
+<div class="flash-message message-success" th:text="${success}" th:if="${success}"></div>
+<div class="flash-message message-error" th:text="${error}" th:if="${error}"></div>
+
+<article>
+    <div class="container px-4 px-lg-5 my-5">
+        <!-- Form Heading-->
+        <div class="container py-5" style="border-radius: 15px; border-color: rgb(25, 130, 201);
+        padding: 2cm; background-image: url('images/clientbg.jpg'); background-size: cover;
+        background-position: center; background-color: rgba(255, 255, 255, 0.7);">
+            <h1 class="font-weight-light text-center" style="background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px; border-radius: 5px; display: inline-block;">Seznam klientů</h1><br>
+        </div>
+        <br>
+        <div id="centrovac">
+            <section>
+
+                <ul class="list-group" id="klienti">
+                    <li th:each="client: ${clients}" class="list-group-item">
+                        <h5 th:text="${client.forename} + ' ' + ${client.lastName}"></h5>
+                        <p>Číslo klienta: <span th:text="${client.clientId}"></span></p>
+<!--                        <form th:action="@{'/clients/delete/' + ${client.clientId}}" method="post">-->
+<!--                            <input type="hidden" name="_method" value="DELETE"/>-->
+<!--                            <input type="hidden" name="_csrf" th:value="${_csrf.token}"/>-->
+<!--                            <button type="submit" class="btn btn-danger">Smazat klienta</button>-->
+                            <a class="btn btn-secondary btn-sm" th:href="@{'/clients/delete/' + ${client.clientId}}">Smazat</a>
+
+                        <!--                        </form>-->
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <br>
+        <div class="card-footer"><a class="btn btn-primary btn-sm" th:href="@{/clients/profile}">Zpět na profil</a></div>
+    </div>
+    <br>
+</article>
+
+<footer th:replace="~{fragments/layout.html :: footer}"></footer>
+<script th:src="@{/scripts/custom.js}"></script>
+
+</body>
+
+</html>
+
+

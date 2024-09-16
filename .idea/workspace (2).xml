@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="23866360-5af0-4cb3-831f-cd3a1028c07e" name="Changes" comment="remove dont work, insurance detail work, client edit work, email control dont work logincontrol dont work">
+      <change beforePath="$PROJECT_DIR$/../Guardiannsurance.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PojisteniApp/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog  with cascadeAndId.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/client_entity.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/client_entity.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/crash_insurances.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/crash_insurances.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/db.opt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/mandatory_insurances.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/mandatory_insurances.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/property_insurance.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/property_insurance.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/user_entity.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/user_entity.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/aria_log.00000001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/aria_log_control" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/blog/client_entity.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/blog/client_entity.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/blog/crash_insurances.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/blog/crash_insurances.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/blog/db.opt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/blog/mandatory_insurances.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/blog/mandatory_insurances.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/blog/property_insurance.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/blog/property_insurance.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/blog/user_entity.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/blog/user_entity.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/ib_buffer_pool" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/ib_logfile0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/ib_logfile1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/ibdata1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/multi-master.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/my.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql.pid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/column_stats.MAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/column_stats.MAI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/column_stats.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/columns_priv.MAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/columns_priv.MAI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/columns_priv.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/db.MAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/db.MAI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/db.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/event.MAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/event.MAI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/event.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/func.MAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/func.MAI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/func.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/general_log.CSM" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/general_log.CSV" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/general_log.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/global_priv.MAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/global_priv.MAI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/global_priv.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/gtid_slave_pos.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/gtid_slave_pos.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/help_category.MAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/help_category.MAI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/help_category.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/help_keyword.MAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/help_keyword.MAI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/help_keyword.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/help_relation.MAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/help_relation.MAI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/help_relation.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/help_topic.MAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/help_topic.MAI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/help_topic.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/index_stats.MAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/index_stats.MAI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/index_stats.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/innodb_index_stats.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/innodb_index_stats.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/innodb_table_stats.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/innodb_table_stats.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/plugin.MAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/plugin.MAI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/plugin.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/proc.MAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/proc.MAI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/proc.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/procs_priv.MAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/procs_priv.MAI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/procs_priv.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/proxies_priv.MAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/proxies_priv.MAI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/proxies_priv.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/roles_mapping.MAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/roles_mapping.MAI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/roles_mapping.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/servers.MAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/servers.MAI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/servers.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/slow_log.CSM" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/slow_log.CSV" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/slow_log.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/table_stats.MAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/table_stats.MAI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/table_stats.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/tables_priv.MAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/tables_priv.MAI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/tables_priv.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/time_zone.MAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/time_zone.MAI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/time_zone.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/time_zone_leap_second.MAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/time_zone_leap_second.MAI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/time_zone_leap_second.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/time_zone_name.MAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/time_zone_name.MAI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/time_zone_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/time_zone_transition.MAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/time_zone_transition.MAI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/time_zone_transition.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/time_zone_transition_type.MAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/time_zone_transition_type.MAI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/time_zone_transition_type.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/transaction_registry.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/transaction_registry.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql/user.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysql_error.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/mysqld.dmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/performance_schema/db.opt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/db.opt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__bookmark.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__bookmark.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__central_columns.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__central_columns.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__column_info.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__column_info.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__designer_settings.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__designer_settings.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__export_templates.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__export_templates.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__favorite.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__favorite.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__history.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__history.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__navigationhiding.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__navigationhiding.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__pdf_pages.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__pdf_pages.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__recent.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__recent.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__relation.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__relation.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__savedsearches.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__savedsearches.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__table_coords.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__table_coords.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__table_info.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__table_info.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__table_uiprefs.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__table_uiprefs.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__tracking.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__tracking.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__userconfig.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__userconfig.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__usergroups.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__usergroups.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__users.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/phpmyadmin/pma__users.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/test/db.opt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jawesy-itnetwork-kurz-main/src/main/java/Insurance/controllers/InsuranceDetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/jawesy-itnetwork-kurz-main/src/main/java/Insurance/controllers/InsuranceDetailController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jawesy-itnetwork-kurz-main/src/main/java/Insurance/models/services/CrashService.java" beforeDir="false" afterPath="$PROJECT_DIR$/jawesy-itnetwork-kurz-main/src/main/java/Insurance/models/services/CrashService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jawesy-itnetwork-kurz-main/src/main/java/Insurance/models/services/CrashServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/jawesy-itnetwork-kurz-main/src/main/java/Insurance/models/services/CrashServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jawesy-itnetwork-kurz-main/src/main/java/Insurance/models/services/MandatoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/jawesy-itnetwork-kurz-main/src/main/java/Insurance/models/services/MandatoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jawesy-itnetwork-kurz-main/src/main/java/Insurance/models/services/MandatoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/jawesy-itnetwork-kurz-main/src/main/java/Insurance/models/services/MandatoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jawesy-itnetwork-kurz-main/src/main/java/Insurance/models/services/PropertyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/jawesy-itnetwork-kurz-main/src/main/java/Insurance/models/services/PropertyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jawesy-itnetwork-kurz-main/src/main/java/Insurance/models/services/PropertyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/jawesy-itnetwork-kurz-main/src/main/java/Insurance/models/services/PropertyServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jawesy-itnetwork-kurz-main/src/main/resources/templates/pages/clients/newclient.html" beforeDir="false" afterPath="$PROJECT_DIR$/jawesy-itnetwork-kurz-main/src/main/resources/templates/pages/clients/newclient.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jawesy-itnetwork-kurz-main/src/main/resources/templates/pages/details/crashDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/jawesy-itnetwork-kurz-main/src/main/resources/templates/pages/details/crashDetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jawesy-itnetwork-kurz-main/src/main/resources/templates/pages/details/mandatoryDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/jawesy-itnetwork-kurz-main/src/main/resources/templates/pages/details/mandatoryDetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jawesy-itnetwork-kurz-main/src/main/resources/templates/pages/details/propertyDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/jawesy-itnetwork-kurz-main/src/main/resources/templates/pages/details/propertyDetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/springboot.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/springboot.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mandatory_insurances.sql" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2lKW8RDqzJJGmrYUT4jhAfiLJFJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.BasicInsuranceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PasswordTest.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;OverrideImplement.generate.javadoc&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;TestNG.ClientServiceImplTest.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/jawes/OneDrive/Rekvalifikace/Pojisteni/jawesy-itnetwork-kurz-main/jawesy-itnetwork-kurz-main/src/test/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/Archiv/Dokumenty/Práce/Rekvalifikace/Pojisteni/Version/jawesy-itnetwork-kurz-main11&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveInnerDialog.RECENTS_KEY">
+      <recent name="Insurance.Configuration" />
+      <recent name="Insurance.models.validations" />
+      <recent name="Insurance.controllers" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="Insurance.models.services" />
+      <recent name="Insurance.models.dto.mappers" />
+      <recent name="Insurance.controllers" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Insurance.models.exceptions" />
+      <recent name="Insurance.models.dto.mappers" />
+      <recent name="Insurance.models.services" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.BasicInsuranceApplication">
+    <configuration name="BasicInsuranceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="19" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Insurance.BasicInsuranceApplication" />
+      <module name="SpringBlog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Insurance.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="19" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientServiceImplTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SpringBlog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Insurance.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Insurance.controllers" />
+      <option name="MAIN_CLASS_NAME" value="Insurance.controllers.ClientServiceImplTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BasicInsuranceApplication" />
+        <item itemvalue="TestNG.ClientServiceImplTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="23866360-5af0-4cb3-831f-cd3a1028c07e" name="Changes" comment="" />
+      <created>1724929088479</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1724929088479</updated>
+    </task>
+    <task id="LOCAL-00001" summary="profile not render registration form and log ok lok ko">
+      <option name="closed" value="true" />
+      <created>1725269819135</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1725269819135</updated>
+    </task>
+    <task id="LOCAL-00002" summary="profile not render registration form and log ok lok ko">
+      <option name="closed" value="true" />
+      <created>1725269992179</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1725269992179</updated>
+    </task>
+    <task id="LOCAL-00003" summary="profile not render registration form and log ok lok ko">
+      <option name="closed" value="true" />
+      <created>1725269998278</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1725269998278</updated>
+    </task>
+    <task id="LOCAL-00004" summary="insurance ok, logon a logof ok, insurance arrange ok, profile 50%">
+      <option name="closed" value="true" />
+      <created>1725616164459</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1725616164459</updated>
+    </task>
+    <task id="LOCAL-00005" summary="remove dont work, insurance detail dont work">
+      <option name="closed" value="true" />
+      <created>1725878646420</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1725878646420</updated>
+    </task>
+    <task id="LOCAL-00006" summary="remove dont work, insurance detail dont work">
+      <option name="closed" value="true" />
+      <created>1725891875674</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1725891875674</updated>
+    </task>
+    <task id="LOCAL-00007" summary="remove dont work, insurance detail dont work">
+      <option name="closed" value="true" />
+      <created>1725891938839</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1725891938839</updated>
+    </task>
+    <task id="LOCAL-00008" summary="remove dont work, insurance detail work, client edit work, email control dont work logincontrol dont work">
+      <option name="closed" value="true" />
+      <created>1725968342470</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1725968342470</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="profile not render registration form and log ok lok ko" />
+    <MESSAGE value="insurance ok, logon a logof ok, insurance arrange ok, profile 50%" />
+    <MESSAGE value="remove dont work, insurance detail work, insurance delete ko" />
+    <MESSAGE value="remove dont work, insurance detail work" />
+    <MESSAGE value="remove dont work, insurance detail work" />
+    <MESSAGE value="remove dont work, insurance detail work, client edit work, email control dont work logincontrol dont work" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove dont work, insurance detail work, client edit work, email control dont work logincontrol dont work" />
+  </component>
+</project>

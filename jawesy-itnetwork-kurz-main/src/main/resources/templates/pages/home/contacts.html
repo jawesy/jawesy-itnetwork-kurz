@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout.html :: head}"></head>
+<body>
+<header th:replace="~{fragments/layout.html :: header}"></header>
+<article>
+    <div class="container px-4 px-lg-5 my-5">
+
+        <div class="container py-5"
+             th:style="'border-radius: 15px; border-color: rgb(25, 130, 201); padding: 2cm; ' +
+               'background-image: url(' + @{/images/pozadi.jpg} + '); ' +
+               'background-size: cover; background-position: center; ' +
+               'background-color: rgba(255, 255, 255, 0.7);'">
+            <h1 class="font-weight-light text-center" style="background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px; border-radius: 5px; display: inline-block;">Kontaktujte nás</h1><br>
+            <p class="lead text-center mb-5" style="background-color: rgba(255, 255, 255, 0.8); padding: 10px;
+            border-radius: 3px; display: inline-block; font-weight: bold;">Máte otázky? Jsme tu pro vás!</p>
+        </div>
+
+        <div class="row gx-4 gx-lg-5">
+            <div class="col-lg-6">
+                <br>
+                <h3>Adresa</h3>
+                <p>Guardian pojišťovna<br>Fiktivní ulice 123<br>100 00 Praha, Česká republika</p>
+            </div>
+            <div class="col-lg-6">
+                <br>
+                <h3>Kontakt</h3>
+                <p>Telefon: +420 123 456 789<br>Email: info@basicpojistovna.cz</p>
+            </div>
+        </div>
+
+        <div class="row gx-4 gx-lg-5 mt-4">
+            <div class="col-lg-6">
+                <h3>Otevírací doba</h3>
+                <p>Pondělí - Pátek: 8:00 - 18:00<br>Sobota: 9:00 - 13:00<br>Neděle: Zavřeno</p>
+            </div>
+            <div class="col-lg-6">
+                <h3>Naše pobočky</h3>
+                <ul>
+                    <li>Brno, Náměstí Svobody 1</li>
+                    <li>Ostrava, Ulice Závodní 20</li>
+                    <li>Plzeň, Ulice Klatovská 15</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row gx-4 gx-lg-5 mt-4">
+            <div class="col">
+                <h3>Formulář pro kontakt</h3>
+                <form>
+                    <div class="form-group mb-3">
+                        <label for="name">Jméno</label>
+                        <input type="text" class="form-control" id="name" placeholder="Vaše jméno" />
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Váš email" />
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="message">Zpráva</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Vaše zpráva"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Odeslat</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</article>
+<footer th:replace="~{fragments/layout.html :: footer}"></footer>
+<script th:src="@{/scripts/custom.js}"></script>
+</body>
+</html>

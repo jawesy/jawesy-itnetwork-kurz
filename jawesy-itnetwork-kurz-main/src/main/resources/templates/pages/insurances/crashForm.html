@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="cs-cz" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout.html :: head}"></head>
+
+<body>
+<header th:replace="~{fragments/layout.html :: header}"></header>
+<!-- Stavové zprávy -->
+<div class="flash-message message-success" th:text="${success}" th:if="${success}"></div>
+<div class="flash-message message-error" th:text="${error}" th:if="${error}"></div>
+
+<article>
+    <div class="container my-5">
+        <!-- Form Heading -->
+        <div class="container py-5 text-center" style="border-radius: 15px; border-color: rgb(25, 130, 201); padding: 2cm; background-image: url('/images/crash.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-color: rgba(255, 255, 255, 0.7);">
+            <h1 class="font-weight-light bg-white p-3 rounded d-inline-block">Sjednání Havarijního pojištění</h1><br>
+            <p class="lead mb-5 bg-white p-3 rounded d-inline-block">Máte otázky? Jsme tu pro vás!
+                <a class="btn btn-primary" href="/contacts">Kontakt</a>
+            </p>
+        </div>
+        <br>
+        <!-- Formulář pro sjednání pojištění -->
+        <form th:action="@{/insurances/crashForm}" th:object="${crashDTO}" method="post">
+            <!-- Skryté políčko pro clientId -->
+            <input type="hidden" th:field="*{clientId}"/>
+
+            <div class="form-group">
+                <label for="crashRz">Registrační značka (RZ)</label>
+                <input type="text" th:field="*{crashRz}" id="crashRz" class="form-control" placeholder="Zadejte registrační značku vozidla" />
+                <div th:if="${#fields.hasErrors('crashRz')}" th:errors="*{crashRz}" class="text-danger"></div>
+            </div>
+            <div class="form-group">
+                <label for="crashLimit" class="form-label">Vyberte variantu pojištění</label>
+                <select class="form-select" th:field="*{crashLimit}" id="crashLimit" required>
+                    <option value="" selected disabled>Vyberte pojistný limit</option>
+                    <option value="Basic">Basic - 5 000 000 Kč</option>
+                    <option value="Pro">PRO - 12 000 000 Kč</option>
+                </select>
+                <div th:if="${#fields.hasErrors('crashLimit')}" th:errors="*{crashLimit}" class="text-danger"></div>
+            </div>
+
+            <!-- Porovnání asistenčních služeb -->
+            <h2 class="text-center mt-5">Porovnání asistenčních služeb</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover bg-white text-dark mt-3" style="text-align:center;">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Služba</th>
+                        <th scope="col">Basic</th>
+                        <th scope="col">Profesional (PRO)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Pojistné plnění / událost</td>
+                        <td>do 100 000 Kč</td>
+                        <td>do 300 000 Kč</td>
+                    </tr>
+                    <tr>
+                        <td>Telefonické informační služby</td>
+                        <td>Ano</td>
+                        <td>Ano</td>
+                    </tr>
+                    <tr>
+                        <td>Technická pomoc</td>
+                        <td>Ano</td>
+                        <td>Ano</td>
+                    </tr>
+                    <tr>
+                        <td>Náhradní ubytování a doprava</td>
+                        <td>Ne</td>
+                        <td>Ano</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="consent" required />
+                <label class="form-check-label" for="consent">
+                    Souhlasím se zpracováním osobních údajů a s registrací do databáze
+                </label>
+            </div>
+            <a class="btn btn-primary btn-sm" th:href="@{/clients/profile}">Zpět na profil</a>
+            <button type="submit" class="btn btn-primary">Odeslat</button>
+        </form>
+    </div>
+    <br>
+</article>
+
+<footer th:replace="~{fragments/layout.html :: footer}"></footer>
+<script th:src="@{/scripts/custom.js}"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="cs-cz" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout.html :: head}">
+</head>
+<body>
+<header th:replace="~{fragments/layout.html :: header}"></header>
+<!-- Stavové zprávy -->
+<div class="flash-message message-success" th:text="${success}" th:if="${success}"></div>
+<div class="flash-message message-error" th:text="${error}" th:if="${error}"></div>
+<article>
+    <div class="container px-4 px-lg-5">
+        <!-- Heading Row-->
+        <div class="row gx-4 gx-lg-5 align-items-center my-5">
+            <div class="col-lg-7">
+                <img class="img-fluid rounded mb-4 mb-lg-0" th:src="@{/images/hlavnistrana.jpg}" alt="neživotní pojištění" />
+            </div>
+            <div class="col-lg-5">
+                <h1 class="font-weight-light">Guardian pojišťovna</h1>
+                <p>Pojišťovna pro váš majetek, povinné ručení a pro případ havárie. <br>S námi se nemusíte bát o to co je vám drahé. Jsme specialisté na pojištění vašich nejcennějších věcí.</p>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdown-tlacitko" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sjednání
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdown-tlacitko">
+                        <a class="dropdown-item" th:href="@{/insurances/propertyInfo}">Pojištění nemovitosti</a>
+                        <a class="dropdown-item" th:href="@{/insurances/mandatoryInfo}">Povinné ručení</a>
+                        <a class="dropdown-item" th:href="@{/insurances/crashInfo}">Havarijní pojištění</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel -->
+        <div id="carouselExample" class="carousel slide my-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="card text-white bg-secondary text-center" style="border: none;">
+                        <img th:src="@{images/property.jpg}" class="d-block w-100 fixed-height" alt="Pojištění nemovitosti">
+                        <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                            <div class="card-body text-center p-0">
+                                <p class="card-text m-0">Pojištění nemovitosti</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Další slide -->
+                <div class="carousel-item">
+                    <div class="card text-white bg-secondary text-center" style="border: none;">
+                        <img th:src="@{images/mandatory.jpg}" class="d-block w-100 fixed-height" alt="Povinné ručení">
+                        <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                            <div class="card-body text-center p-0">
+                                <p class="card-text m-0">Povinné ručení</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Další slide -->
+                <div class="carousel-item">
+                    <div class="card text-white bg-secondary text-center" style="border: none;">
+                        <img th:src="@{images/crash.jpg}" class="d-block w-100 fixed-height" alt="Havarijní pojištění">
+                        <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                            <div class="card-body text-center p-0">
+                                <p class="card-text m-0">Havarijní pojištění</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigační prvky pro posun mezi slidery -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- Content Row-->
+        <div class="row gx-4 gx-lg-5">
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-building fa-6x mb-3"></i>
+                        <h2 class="card-title">Pojištění nemovitosti</h2><br>
+                        <p class="card-text"> Kryje škody způsobené na bytě, domě nebo rekreační chatě.
+                            Vztahuje se ale také na stavební materiál, nebytové prostory a společné části domu a spoluvlastnický podíl v případě bytového domu.
+                            Chráníme váš domov a věci, které k vám patří.</p>
+                    </div>
+                    <div class="card-footer"><a class="btn btn-primary btn-sm" th:href="@{/insurances/propertyInfo}">Více info</a></div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-car fa-6x mb-3"></i>
+                        <h2 class="card-title">Povinné ručení</h2><br>
+                        <p class="card-text">Vzberte si ideální řešení pro váš vůz! Zahrnuje minimální limit pro případ škody způsobené 3. osobě od 3 000 000 Kč. Asistenční službu ve variantě Basic a další.</p>
+                    </div>
+                    <div class="card-footer"><a class="btn btn-primary btn-sm" th:href="@{/insurances/mandatoryInfo}">Více info</a></div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-car-crash fa-6x mb-3"></i>
+                        <h2 class="card-title">Havarijní pojištění</h2><br>
+                        <p class="card-text">Ochrana vozu před havárií, odcizením, živelní událostí i vandalismem? Zde najdete nabídku s asistenční službou PRO, včetně náhradního vozu či ubytování až na 2 dny v zahraničí. Přímo pro Vás!</p>
+                    </div>
+                    <div class="card-footer"><a class="btn btn-primary btn-sm" th:href="@{/insurances/crashInfo}">Více info</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<footer th:replace="~{fragments/layout.html :: footer}"></footer>
+<script th:src="@{/scripts/custom.js}"></script>
+</body>
+</html>

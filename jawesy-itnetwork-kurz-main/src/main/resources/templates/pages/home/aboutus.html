@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout.html :: head}"></head>
+<body>
+<header th:replace="~{fragments/layout.html :: header}"></header>
+<article>
+    <div class="container px-4 px-lg-5 my-5">
+        <h1 class="font-weight-light text-center">Náš příběh</h1>
+<br>
+        <!-- Image placeholder -->
+        <div class="text-center mb-5">
+            <img th:src="@{images/pozadi2.png}" class="img-fluid rounded" alt="Náš tým" style="max-width: 100%;">
+        </div>
+
+        <!-- Dva kontejnery vedle sebe -->
+        <div class="row gx-4 gx-lg-5">
+            <!-- První container -->
+            <div class="col-lg-6">
+                <p>
+                    Guardian pojišťovna vznikla v roce 2018 jako odpověď na rostoucí potřebu kvalitního a dostupného pojištění pro mladé a perspektivní klienty. Naše firma byla založena skupinou nadšených profesionálů s bohatými zkušenostmi v oblasti pojišťovnictví a finančních služeb.
+                </p>
+                <p>
+                    Od počátku jsme se zaměřili na jednoduchost, transparentnost a osobní přístup ke každému klientovi. Věříme, že pojištění by nemělo být složité ani nepřehledné. Proto jsme vytvořili produkty, které odpovídají potřebám našich klientů a které se snadno sjednávají online nebo prostřednictvím našich poboček.
+                </p>
+            </div>
+
+            <!-- Druhý container -->
+            <div class="col-lg-6">
+                <p>
+                    Naše služby se neustále vyvíjejí, abychom mohli nabídnout moderní řešení pro dnešní dynamický trh. Věnujeme zvláštní pozornost ochraně vašeho majetku. Ať už jde o povinné ručení, pojištění nemovitosti nebo havarijní pojištění, u nás vždy najdete optimální nabídku.
+                </p>
+                <p>
+                    Dnes máme tisíce spokojených klientů po celé České republice, kteří oceňují náš osobní přístup, rychlé vyřízení pojistných událostí a výhodné ceny. S naším mladým a dynamickým týmem jsme připraveni reagovat na všechny výzvy, které budoucnost přináší.
+                </p>
+            </div>
+        </div>
+
+        <!-- Slogan pod textem -->
+        <div class="text-center mt-5">
+            <h4 class="font-weight-bold">Jsme Guardian pojišťovna – váš partner pro bezpečnou budoucnost.</h4>
+        </div>
+    </div>
+</article>
+<footer th:replace="~{fragments/layout.html :: footer}"></footer>
+<script th:src="@{/scripts/custom.js}"></script>
+</body>
+</html>

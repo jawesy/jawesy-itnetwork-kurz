@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="cs-cz" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout.html :: head}"></head>
+
+<body>
+<header th:replace="~{fragments/layout.html :: header}"></header>
+<!-- Stavové zprávy -->
+<div class="flash-message message-success" th:text="${success}" th:if="${success}"></div>
+<div class="flash-message message-error" th:text="${error}" th:if="${error}"></div>
+
+<article>
+    <div class="container my-5">
+        <!-- Form Heading -->
+        <div class="container py-5 text-center" style="border-radius: 15px; border-color: rgb(25, 130, 201); padding: 2cm; background-image: url('/images/property.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-color: rgba(255, 255, 255, 0.7);">
+            <h1 class="font-weight-light bg-white p-3 rounded d-inline-block">Sjednání pojištění majetku</h1><br>
+            <p class="lead mb-5 bg-white p-3 rounded d-inline-block">Máte otázky? Jsme tu pro vás!
+                <a class="btn btn-primary" href="/contacts">Kontakt</a>
+            </p>
+        </div>
+        <br>
+        <!-- Formulář pro sjednání pojištění -->
+        <form th:action="@{/insurances/propertyForm}" th:object="${propertyDTO}" method="post">
+            <!-- Skryté políčko pro clientId -->
+            <input type="hidden" th:field="*{clientId}"/>
+
+            <div class="form-group">
+                <label for="insuranceStreet">Ulice</label>
+                <input type="text" th:field="*{insuranceStreet}" id="insuranceStreet" class="form-control" placeholder="Zadejte ulici" />
+                <div th:if="${#fields.hasErrors('insuranceStreet')}" th:errors="*{insuranceStreet}" class="text-danger"></div>
+            </div>
+            <div class="form-group">
+                <label for="insuranceHouseNumber">Číslo popisné/orientační</label>
+                <input type="text" th:field="*{insuranceHouseNumber}" id="insuranceHouseNumber" class="form-control" placeholder="Zadejte číslo popisné/orientační" />
+                <div th:if="${#fields.hasErrors('insuranceHouseNumber')}" th:errors="*{insuranceHouseNumber}" class="text-danger"></div>
+            </div>
+            <div class="form-group">
+                <label for="insuranceCity">Město</label>
+                <input type="text" th:field="*{insuranceCity}" id="insuranceCity" class="form-control" placeholder="Zadejte město" />
+                <div th:if="${#fields.hasErrors('insuranceCity')}" th:errors="*{insuranceCity}" class="text-danger"></div>
+            </div>
+            <div class="form-group">
+                <label for="insuranceZip">PSČ</label>
+                <input type="text" th:field="*{insuranceZip}" id="insuranceZip" class="form-control" placeholder="Zadejte PSČ" />
+                <div th:if="${#fields.hasErrors('insuranceZip')}" th:errors="*{insuranceZip}" class="text-danger"></div>
+            </div>
+            <div class="form-group">
+                <label for="propertyLimit" class="form-label">Vyberte variantu pojištění</label>
+                <select class="form-select" th:field="*{propertyLimit}" id="propertyLimit" required>
+                    <option value="" selected disabled>Vyberte pojistný limit</option>
+                    <option value="Basic">Basic - 3 000 000 Kč</option>
+                    <option value="Pro">PRO - 6 000 000 Kč</option>
+                </select>
+                <div th:if="${#fields.hasErrors('propertyLimit')}" th:errors="*{propertyLimit}" class="text-danger"></div>
+            </div>
+
+            <!-- Porovnání asistenčních služeb -->
+            <h2 class="text-center mt-5">Porovnání asistenčních služeb</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover bg-white text-dark mt-3" style="text-align:center;">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Služba</th>
+                        <th scope="col">Basic</th>
+                        <th scope="col">Profesional (PRO)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Pojistné plnění / událost</td>
+                        <td>do 100 000 Kč</td>
+                        <td>do 300 000 Kč</td>
+                    </tr>
+                    <tr>
+                        <td>Telefonické informační služby</td>
+                        <td>Ano</td>
+                        <td>Ano</td>
+                    </tr>
+                    <tr>
+                        <td>Technická pomoc</td>
+                        <td>Ano</td>
+                        <td>Ano</td>
+                    </tr>
+                    <tr>
+                        <td>Náhradní ubytování a doprava</td>
+                        <td>Ne</td>
+                        <td>Ano</td>
+                    </tr>
+                    <tr>
+                        <td>Elektrikář</td>
+                        <td>do 2000 Kč</td>
+                        <td>Ano</td>
+                    </tr>
+                    <tr>
+                        <td>Náhodné poškození skel</td>
+                        <td>Ano</td>
+                        <td>Ano</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="consent" required />
+                <label class="form-check-label" for="consent">
+                    Souhlasím se zpracováním osobních údajů a s registrací do databáze
+                </label>
+            </div>
+            <a class="btn btn-primary btn-sm" th:href="@{/clients/profile}">Zpět na profil</a>
+            <button type="submit" class="btn btn-primary">Odeslat</button>
+        </form>
+    </div>
+    <br>
+</article>
+
+<footer th:replace="~{fragments/layout.html :: footer}"></footer>
+<script th:src="@{/scripts/custom.js}"></script>
+</body>
+</html>
